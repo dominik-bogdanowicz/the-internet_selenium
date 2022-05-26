@@ -3,13 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AddRemoveElementPage {
+public class AddRemoveElementsPage {
 
     private WebDriver driver;
     private By addButton = By.cssSelector("div.example>button");
     private By deleteButton = By.cssSelector("div#elements>button");
 
-    public AddRemoveElementPage(WebDriver driver){
+    public AddRemoveElementsPage(WebDriver driver){
         this.driver = driver;
     }
 
