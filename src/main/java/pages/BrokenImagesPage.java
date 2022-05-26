@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 
 public class BrokenImagesPage {
     private WebDriver driver;
-    private String xPathPrefix = "//div[@id='example']";
     private By images = By.tagName("img");
 
     public BrokenImagesPage(WebDriver driver){
