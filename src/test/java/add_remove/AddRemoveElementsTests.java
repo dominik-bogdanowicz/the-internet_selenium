@@ -9,7 +9,7 @@ import static org.testng.Assert.*;
 public class AddRemoveElementsTests extends BaseTests {
     @Test
     public void testAddButton(){
-        AddRemoveElementsPage addRemovePage = homePage.addRemovePageClick();
+        var addRemovePage = homePage.addRemovePageClick();
 
         addRemovePage.clickAddButton();
 
