@@ -15,6 +15,11 @@ public class HomePage {
         return new AddRemoveElementsPage(driver);
     }
 
+    public BasicAuthPage goToBasicAuthPageWithCredentials(){
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+        return new BasicAuthPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
