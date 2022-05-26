@@ -20,6 +20,11 @@ public class HomePage {
         return new BasicAuthPage(driver);
     }
 
+    public BrokenImagesPage brokenImagesPageClick(){
+        clickLink("Broken Images");
+        return new BrokenImagesPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
