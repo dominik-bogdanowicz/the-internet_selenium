@@ -10,6 +10,11 @@ public class HomePage {
         this.driver = driver;
     }
 
+    public AddRemoveElementsPage addRemovePageClick(){
+        clickLink("Add/Remove Elements");
+        return new AddRemoveElementsPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
