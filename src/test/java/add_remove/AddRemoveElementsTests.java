@@ -1,4 +1,4 @@
-package add_delete;
+package add_remove;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
