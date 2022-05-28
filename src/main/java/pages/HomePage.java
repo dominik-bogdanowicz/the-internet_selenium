@@ -25,6 +25,11 @@ public class HomePage {
         return new BrokenImagesPage(driver);
     }
 
+    public ChallengingDOMPage challengingDOMPageClick(){
+        clickLink("Challenging DOM");
+        return new ChallengingDOMPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
