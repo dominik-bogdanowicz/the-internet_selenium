@@ -30,6 +30,11 @@ public class HomePage {
         return new ChallengingDOMPage(driver);
     }
 
+    public CheckboxesPage checkboxesPageClick(){
+        clickLink("Checkboxes");
+        return new CheckboxesPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
