@@ -3,12 +3,16 @@ pipeline{
     stages{
         stage('build'){
             steps{
-            sh 'mvn clean install'
+                withMaven(){
+                    sh 'mvn clean install'
+                }
             }
         }
         stage('test'){
             steps{
-                sh 'mvn test'
+                withMaven(){
+                    sh 'mvn test'
+                }
                 post{
                     always {
                         step([$class: 'Publisher', reportFilenamePattern: '**/testng-result.xml'])
