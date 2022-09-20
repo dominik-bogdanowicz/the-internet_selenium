@@ -16,7 +16,8 @@ pipeline{
         }
         stage('email'){
             steps{
-                emailext attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'',subject:'',to:'gmpsdet08082022@yahoo.com'
+                env.ForEmailPlugin = env.WORKSPACE
+                emailext attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'',subject:'',to:'dominik.bogdanowicz.kontakt@gmail.com'
             }
         }
     }
