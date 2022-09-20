@@ -9,7 +9,7 @@ public class BrokenImagesTests extends BaseTests {
     @Test
     public void testAreAllImagesDisplayed(){
         var brokenImages = homePage.brokenImagesPageClick();
-        assertTrue(brokenImages.isEveryImageDisplayed());
+        assertFalse(brokenImages.isEveryImageDisplayed());
     }
     @Test
     public void testIsThirdImageDisplayed(){
