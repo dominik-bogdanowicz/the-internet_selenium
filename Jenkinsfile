@@ -16,7 +16,7 @@ pipeline{
         }
         stage('email'){
             steps{
-                emailext.attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'',subject:'',to:'gmpsdet08082022@yahoo.com'
+                emailext attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'',subject:'',to:'gmpsdet08082022@yahoo.com'
             }
         }
     }
