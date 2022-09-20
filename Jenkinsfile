@@ -12,10 +12,11 @@ pipeline{
         stage('test'){
             steps{
                 sh 'mvn test'
-                post{
-                    always {
-                        step([$class: 'Publisher', reportFilenamePattern: '**/testng-result.xml'])
-                    }
+
+            }
+            post{
+                always {
+                    step([$class: 'Publisher', reportFilenamePattern: '**/testng-result.xml'])
                 }
             }
         }
