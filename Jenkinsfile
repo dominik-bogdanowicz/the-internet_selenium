@@ -16,7 +16,7 @@ pipeline{
         }
         stage('email'){
             steps{
-                emailext attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'',subject:'',to:'dominik.bogdanowicz.kontakt@gmail.com'
+                emailext attachmentsPattern: 'target/surefire-reports/emailable-report.html',body:'test',subject:'test1',to:'dominik.bogdanowicz.kontakt@gmail.com'
             }
         }
     }
