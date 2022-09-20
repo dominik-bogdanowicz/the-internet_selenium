@@ -2,17 +2,19 @@ pipeline{
     agent any
     stages{
         stage('build'){
+            steps{
             sh 'mvn clean install'
+            }
         }
         stage('test'){
-            sh 'mvn test'
-            post{
-                always {
-                    step([$class: 'Publisher', reportFilenamePattern: '**/testng-result.xml'])
+            steps{
+                sh 'mvn test'
+                post{
+                    always {
+                        step([$class: 'Publisher', reportFilenamePattern: '**/testng-result.xml'])
+                    }
                 }
             }
         }
-        stage('post')
-
     }
 }
