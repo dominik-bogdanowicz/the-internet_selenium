@@ -22,7 +22,7 @@ public class BaseTests {
     public void setUp() throws MalformedURLException {
         //System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new RemoteWebDriver(new URL("localhost:4444"), chromeOptions);
+        driver = new RemoteWebDriver(new URL("http://172.17.0.3:4444"), chromeOptions);
         homePage = new HomePage(driver);
 
         goHome();
