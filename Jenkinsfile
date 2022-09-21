@@ -4,11 +4,6 @@ pipeline{
         maven 'mvn'
     }
     stages{
-        stage('build'){
-            steps{
-                sh 'mvn clean install'
-            }
-        }
         stage('test'){
             steps{
                 sh 'mvn clean test'
@@ -22,7 +17,7 @@ pipeline{
     }
     post{
         always{
-            archiveArtifacts artifacts: 'target/surefire-reports/index.html'
+            archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
             step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
         }
     }
