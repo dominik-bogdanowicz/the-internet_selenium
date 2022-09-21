@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('build'){
             steps{
-                echo 'Build not necessary?'
+                sh 'mvn clean install'
             }
         }
         stage('test'){
