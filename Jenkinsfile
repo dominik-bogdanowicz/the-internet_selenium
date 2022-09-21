@@ -22,7 +22,7 @@ pipeline{
     }
     post{
         always{
-            archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
+            archiveArtifacts artifacts: 'target/surefire-reports/index.html'
             step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
         }
     }
