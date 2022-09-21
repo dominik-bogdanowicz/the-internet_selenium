@@ -23,7 +23,6 @@ pipeline{
     post{
         always{
             archiveArtifacts artifacts: 'target/surefire-reports/emailable-report.html'
-            step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
         }
         success{
             junit '**/target/surefire-reports/TEST-*.xml'
